@@ -24,7 +24,15 @@ RUN ARCH=$(uname -m) \
 
 ENV PATH="/opt/conda/bin:$PATH"
 
-RUN conda init bash && conda clean -afy
+# Accept Anaconda's Terms of Service so non-interactive `conda install` works
+RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main \
+    && conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+
+# Pre-install the scientific Python stack into base so attendees don't wait at workshop time
+RUN conda install -n base -y python=3.13 numpy scipy matplotlib pybind11 \
+    && conda clean -afy
+
+RUN conda init bash
 
 WORKDIR /build
 
