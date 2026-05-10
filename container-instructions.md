@@ -2,7 +2,7 @@
 
 ## What's included
 
-- Ubuntu 22.04
+- Ubuntu 24.04
 - Build tools: GCC, CMake
 - System libraries: OpenBLAS, LAPACK, OpenMP
 - Miniconda (`conda` available in `bash` on launch)

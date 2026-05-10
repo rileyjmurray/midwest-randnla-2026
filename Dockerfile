@@ -1,5 +1,5 @@
-# Use a modern Ubuntu base with good C++20 support (GCC 11+)
-FROM ubuntu:22.04
+# Use a modern Ubuntu base with good C++20/23 support (GCC 13)
+FROM ubuntu:24.04
 
 # Prevent interactive prompts during package installation
 ENV DEBIAN_FRONTEND=noninteractive
