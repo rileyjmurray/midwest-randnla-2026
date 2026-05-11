@@ -3,4 +3,12 @@ build*
 .vscode/
 .idea/
 repo-randlapack
+install-randlapack/
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.so
+*.egg-info/
+.pytest_cache/
 
