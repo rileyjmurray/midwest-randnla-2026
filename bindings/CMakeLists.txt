@@ -13,14 +13,6 @@ if(NOT DEFINED RandLAPACK_DIR AND EXISTS "/workshop/install-randlapack/lib/cmake
     set(RandLAPACK_DIR "/workshop/install-randlapack/lib/cmake/RandLAPACK")
 endif()
 
-# Workaround for upstream RandBLAS bug: its installed FindRandom123.cmake leaks
-# install() rules that reference paths in the consumer source tree. Pre-create
-# the Random123 target so those rules are skipped via `if(NOT TARGET Random123)`.
-if(NOT TARGET Random123)
-    add_library(Random123 INTERFACE)
-    target_include_directories(Random123 SYSTEM INTERFACE "$ENV{R123_DIR}")
-endif()
-
 find_package(RandLAPACK CONFIG REQUIRED)
 
 pybind11_add_module(_suparla
