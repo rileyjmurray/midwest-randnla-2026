@@ -45,4 +45,4 @@ The installed RandLAPACK lives at `/workshop/install-randlapack` after the parti
 
 ## Scope of this file
 
-This file is intentionally limited to *infrastructural* facts — where things are, how to build, what the package is named. It deliberately does not document algorithm-specific design choices (data layouts, dtypes, RNG handling, which header defines which driver). Those are part of the participant's prompt and the agent's job to discover or to be told.
+This file is intentionally limited to *infrastructural* facts — where things are, how to build, what the package is named. It deliberately does not document algorithm-specific design choices. Those are part of the participant's prompt and the agent's job to discover or to be told.
