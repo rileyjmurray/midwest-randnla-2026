@@ -42,7 +42,7 @@ make -j4 install
 ## configure conda
 
 ```
-conda create -n py313 python=3.13 numpy scipy matplotlib pybind11 -y
+conda create -n py313 python=3.13 numpy scipy matplotlib pybind11 pytest -y
 conda activate py313
 ```
 
