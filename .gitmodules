@@ -1,0 +1,3 @@
+[submodule "repo-randlapack"]
+	path = repo-randlapack
+	url = https://github.com/BallisticLA/RandLAPACK.git
