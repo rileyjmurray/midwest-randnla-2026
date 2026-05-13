@@ -52,6 +52,7 @@ to be aware of.
    environment variables for locations of BLAS++, LAPACK++, and Random123
    dependencies. These environment variables are only appropriate for the 
    Docker container used in the tutorial. You'll have to set them yourself if
+   you don't use Docker.
 
 This step is complete when (1) RandLAPACK is installed and (2) you can run
 the following shell commands successfully.
